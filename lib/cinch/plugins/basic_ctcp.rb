@@ -1,17 +1,21 @@
-require "time"
+# frozen_string_literal: true
 
 module Cinch
   module Plugins
     class BasicCTCP
       include Cinch::Plugin
 
+      DEFAULT_VERSION_REPLY = "IRCinch v#{Cinch::VERSION}".freeze
+      private_constant :DEFAULT_VERSION_REPLY
+
       ctcp :version
       ctcp :time
       ctcp :ping
       ctcp :source
       ctcp :clientinfo
+
       def ctcp_version(m)
-        m.ctcp_reply reply(:version) || "Cinch v#{Cinch::VERSION}" if reply_to_ctcp?(:version)
+        m.ctcp_reply reply(:version) || DEFAULT_VERSION_REPLY if reply_to_ctcp?(:version)
       end
 
       def ctcp_time(m)
@@ -23,7 +27,7 @@ module Cinch
       end
 
       def ctcp_source(m)
-        m.ctcp_reply reply(:source) || "http://github.com/cinchrb/cinch" if reply_to_ctcp?(:source)
+        m.ctcp_reply reply(:source) || "https://github.com/ircinchrb/ircinch" if reply_to_ctcp?(:source)
       end
 
       def ctcp_clientinfo(m)
@@ -36,8 +40,10 @@ module Cinch
       end
 
       private
+
       def reply(command)
-        config[:replies][command]
+        replies = config[:replies]
+        replies[command] if replies
       end
     end
   end
