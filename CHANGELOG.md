@@ -2,7 +2,7 @@
 
 ## ircinch-basic_ctcp 1.1.2 (unreleased)
 
-- Forked `cinch-basic_ctcp` as `ircinch-basic_ctcp`. The gem requires IRCinch 2.4.0 or later and Ruby 3.3 or later. Load it with `require "cinch/plugins/basic_ctcp"` and register `Cinch::Plugins::BasicCTCP`.
+- Forked `cinch-basic_ctcp` as `ircinch-basic_ctcp`. The gem requires IRCinch 2.4.6 or later and Ruby 3.3 or later. Load it with `require "cinch/plugins/basic_ctcp"` and register `Cinch::Plugins::BasicCTCP`.
 - Updated the default `VERSION` reply to report IRCinch and the default `SOURCE` reply to link to the IRCinch repository.
 - Fixed `VERSION`, `SOURCE`, and `CLIENTINFO` replies when `:replies` is omitted. Partial overrides fall back to the built-in replies for the other commands.
 - Reused the built-in `VERSION`, `SOURCE`, and `CLIENTINFO` reply strings, eliminated the empty hash allocation when `:replies` is omitted, and removed the unused `time` require.

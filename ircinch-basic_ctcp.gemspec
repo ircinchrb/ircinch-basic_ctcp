@@ -24,7 +24,7 @@ Gem::Specification.new do |spec|
   spec.files = Dir["CHANGELOG.md", "LICENSE.txt", "README.md", "lib/**/*"]
 
   # Register runtime dependencies (gems required to run this gem)
-  spec.add_dependency "ircinch", ">= 2.4.0"
+  spec.add_dependency "ircinch", ">= 2.4.6"
 
   # Register development dependencies (gems required to program this gem)
   spec.add_development_dependency "bundler-audit"

@@ -14,7 +14,7 @@
 
 ## Installation
 
-The gem requires Ruby 3.3 or newer and IRCinch 2.4.0 or newer.
+The gem requires Ruby 3.3 or newer and IRCinch 2.4.6 or newer.
 
 ### RubyGems
 
