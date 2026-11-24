@@ -1,6 +1,6 @@
 # Changelog
 
-## ircinch-basic_ctcp 1.1.2 (unreleased)
+## ircinch-basic_ctcp 1.1.2 (2026-11-23)
 
 - Forked `cinch-basic_ctcp` as `ircinch-basic_ctcp`. The gem requires IRCinch 2.4.6 or later and Ruby 3.3 or later. Load it with `require "cinch/plugins/basic_ctcp"` and register `Cinch::Plugins::BasicCTCP`.
 - Updated the default `VERSION` reply to report IRCinch and the default `SOURCE` reply to link to the IRCinch repository.
