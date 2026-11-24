@@ -23,7 +23,9 @@ module Cinch
       end
 
       def ctcp_ping(m)
-        m.ctcp_reply m.ctcp_args.join(" ") if reply_to_ctcp?(:ping)
+        return unless reply_to_ctcp?(:ping) && m.command == "PRIVMSG"
+
+        m.user.notice "\001#{m.ctcp_message}\001"
       end
 
       def ctcp_source(m)
